@@ -1,0 +1,7 @@
+aiohttp==3.11.14
+autogen-agentchat==0.4.9.2
+autogen-ext[openai,azure]==0.4.9.2
+chainlit==2.4.201
+chromadb==0.6.3
+firecrawl-py==1.14.1
+python-dotenv==1.0.1

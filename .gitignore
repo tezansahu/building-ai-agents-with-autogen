@@ -1,0 +1,4 @@
+.env
+ai-agents/
+.chromadb_autogen/
+code_executor/
