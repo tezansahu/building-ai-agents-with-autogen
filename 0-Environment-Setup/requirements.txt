@@ -4,4 +4,9 @@ autogen-ext[openai,azure]==0.4.9.2
 chainlit==2.4.201
 chromadb==0.6.3
 firecrawl-py==1.14.1
+langchain==0.3.21
+langchain-community==0.3.20
+langchain_huggingface==0.1.2
+langchain-text-splitters==0.3.7
+pypdf==5.4.0
 python-dotenv==1.0.1
