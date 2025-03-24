@@ -155,7 +155,7 @@ Only select one agent.
 
     # Write to a file
     id = str(uuid.uuid4())
-    with open(f"system_design_report_{id}.md", "w") as f:
+    with open(os.path.join("system_design_docs", f"system_design_report_{id}.md"), "w") as f:
         f.write(result.messages[-1].content.strip("TERMINATE").strip())
     
     await model_client.close()
