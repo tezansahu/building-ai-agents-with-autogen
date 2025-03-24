@@ -136,7 +136,7 @@ async def main() -> None:
         model_client=model_client,
         tools=[serper_web_search, write_report],
         # We remove the reflect_on_tool_use here because that generates a text message, which would be considered as a termination condition.
-        system_message="You are a Career Mentor Agent with deep expertise in career development, professional growth, and industry trends. Your goal is to provide thoughtful, strategic, and actionable advice to help users navigate career challenges, make informed decisions, and achieve long-term success. Use the tools at your disposal whenever required. Note that you can scrape 2 website URLs at max - so select them wisely. Offer clear, empathetic guidance based on your knowledge, considering the user's background and goals. If the question is outside the domain of career development, politely redirect the user to a more appropriate topic.",
+        system_message="You are a Career Mentor Agent with deep expertise in career development, professional growth, and industry trends. Your goal is to provide thoughtful, strategic, and actionable advice to help users navigate career challenges, make informed decisions, and achieve long-term success. Use the tools at your disposal whenever required. Offer clear, empathetic guidance based on your knowledge, considering the user's background and goals. If the question is outside the domain of career development, politely redirect the user to a more appropriate topic.",
         memory=[chroma_user_memory],
     )
 
