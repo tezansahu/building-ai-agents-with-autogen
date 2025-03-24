@@ -61,3 +61,18 @@ Copy your PAT *immediately* & add it to the `.env` file.
 Create a FREE account on [Serper.dev](https://serper.dev/)
 
 Now, copy the API Key from the dashboard & paste it into the `.env` file.
+
+
+### Firecrawl - Web Scraping API
+
+Sign up for a FREE account on [Firecrawl.dev](https://www.firecrawl.dev/) with your Google account.
+
+Now, copy the API Key from the dashboard & paste it into the `.env` file.
+
+### Typefully - Tweet Scheduling
+
+Log in with your Twitter/X account on [Typfully](https://typefully.com/)
+
+Click on your profile image > Manage Accounts > API & Integrations
+
+Now, copy the API Key & paste it into the `.env` file.
