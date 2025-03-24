@@ -2,3 +2,6 @@
 ai-agents/
 .chromadb_autogen/
 code_executor/
+__pycache__/
+.chainlit/
+chainlit.md
