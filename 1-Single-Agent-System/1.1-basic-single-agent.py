@@ -6,7 +6,6 @@ import asyncio
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.ui import Console
 from autogen_ext.models.azure import AzureAIChatCompletionClient
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
 from azure.core.credentials import AzureKeyCredential
 
 
