@@ -1,6 +1,6 @@
-# AI Agents with AutoGen
+# Building AI Agents with AutoGen
 
-This repository demonstrates the implementation of AI agents using the AutoGen framework, to accompany the workshop "Building AI Agents 
+This repository demonstrates the implementation of AI agents using the AutoGen framework, to accompany the workshop "Building AI Agents with AutoGen".
 
 It showcases various single-agent and multi-agent systems, as well as a user interface for interacting with these agents. Each system is designed to solve specific tasks, ranging from career mentoring to collaborative system design and marketing campaign creation.
 
