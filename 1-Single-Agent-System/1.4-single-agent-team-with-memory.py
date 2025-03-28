@@ -70,8 +70,9 @@ def write_report(content: str, filename: str) -> str:
 # Define the memory for the agent
 
 async def populate_memory():
+    print("Populating memory...")
     # Initialize ChromaDB memory with custom config
-    # (First run may take som time to download the ONNX Model used to vectorize the text)
+    # (First run may take som time to download the "all-MiniLM-L6-v2" ONNX Model used to vectorize the text)
     chroma_user_memory = ChromaDBVectorMemory(
         config=PersistentChromaDBVectorMemoryConfig(
             collection_name="preferences",

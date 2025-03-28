@@ -41,6 +41,8 @@ async def get_rag_tool():
             async for page in loader.alazy_load():
                 pages.append(page)
 
+    # This RecursiveCharacterTextSplitter splits a large text into smaller, manageable chunks that fit within the model's context window. 
+    # It uses a set of characters to recursively split the text until the chunks are within the specified size.
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000, chunk_overlap=200
     )
