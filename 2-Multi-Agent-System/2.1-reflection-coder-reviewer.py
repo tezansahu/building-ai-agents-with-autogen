@@ -48,7 +48,7 @@ async def main() -> None:
         name="critic_agent",
         model_client=model_client,
         tools=[python_code_executor_tool],
-        system_message="You are a code reviewer that can help with code-related tasks by running the code, reviewing it and providing feedback to correct or optimize the code. Respond with 'TERMINATE' only if the code is correct and you have no more feedback.",
+        system_message="You are a code reviewer that can help with code-related tasks by running the code, reviewing it and providing feedback to correct or optimize the code. Respond with 'TERMINATE' when concluding the review process, only if the code is correct, all your feedback has been addressed and you have no more feedback.",
         reflect_on_tool_use=True,
     )
 

@@ -112,7 +112,7 @@ async def main() -> None:
         1. Map out the core idea that the blog discusses
         2. Identify key sections and what each section is about
         3. For each section, extract all URLs that appear inside image markdown syntax ![](image_url)
-        4. You must associate these identified image urls to their correspoinding sections, so that we can use them with the tweets as media pieces
+        4. You must associate these identified image urls to their corresponding sections, so that we can use them with the tweets as media pieces
         Focus on details that are important for a comprehensive understanding of the blog.
         
         The expected output from you is a technical analysis containing:
@@ -198,3 +198,4 @@ if __name__ == "__main__":
 # ------------------------------------------------
 # 1. https://nmn.gl/blog/ai-and-learning
 # 2. https://huyenchip.com/2025/01/07/agents.html
+# 3. https://medium.com/generative-ai/how-to-use-ai-to-create-awesome-brand-images-in-minutes-7916d9e47595

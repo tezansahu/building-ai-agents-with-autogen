@@ -83,7 +83,7 @@ async def populate_memory():
     )
 
     # memory = [
-    #     "I have a strong background in machine learning and want to transition into product management.",
+    #     "I have a strong background in consulting and want to transition into product management.",
     #     "I prefer working in fast-paced startup environments.",
     #     "I value work-life balance and prefer remote work.",
     #     "I'm interested in leadership roles and cross-functional collaboration.",
@@ -177,6 +177,7 @@ if __name__ == "__main__":
         asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
     asyncio.run(main())
+
 
 # ------------------------------------------------
 # Example tasks to test the agent's response.

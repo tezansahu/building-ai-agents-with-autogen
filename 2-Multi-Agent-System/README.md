@@ -23,11 +23,6 @@ This folder contains implementations of multi-agent systems, showcasing collabor
    - DevOps Engineer
    - Report Writer
 
-4. **[2.4-swarm-marketing-campaign-creator.py](2.4-swarm-marketing-campaign-creator.py)**  
-   A swarm-based system where agents collaborate to create a comprehensive marketing campaign, including competitor analysis, strategy formulation, and content creation. This involves 3 agents:
-   - Lead Marketing Analyst
-   - Chief Marketing Strategist
-   - Creative Content Creator
 
 ## Prerequisites
 

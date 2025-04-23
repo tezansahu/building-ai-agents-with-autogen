@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 import asyncio
 
 from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.conditions import TextMessageTermination
+from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.ui import Console
 from autogen_ext.models.azure import AzureAIChatCompletionClient
 from azure.core.credentials import AzureKeyCredential
@@ -40,7 +42,6 @@ def serper_web_search(query: str) -> str:
     if response.status_code != 200:
         return f"Error: {response.status_code} - {response.text}"
     return response.text
-
     
 
 def write_report(content: str, filename: str) -> str:
@@ -55,14 +56,13 @@ def write_report(content: str, filename: str) -> str:
         str: Status of the file writing operation.
     """
     try:
-        with open(filename, "w") as file:
+        with open(filename, "w", encoding="utf-8") as file:
             file.write(content)
-        return f"Report written to: {filename}"
+        return f"Content written to: {filename}"
     except Exception as e:
         return f"Error: {str(e)}"
 
 ##############################################################################
-
 
 async def main() -> None:
     # Create the Client
@@ -85,29 +85,37 @@ async def main() -> None:
         name="career_mentor_agent",
         model_client=model_client,
         tools=[serper_web_search, write_report],
-        reflect_on_tool_use=True,
+        # We remove the reflect_on_tool_use here because that generates a text message, which would be considered as a termination condition.
         system_message="You are a Career Mentor Agent with deep expertise in career development, professional growth, and industry trends. Your goal is to provide thoughtful, strategic, and actionable advice to help users navigate career challenges, make informed decisions, and achieve long-term success. Use the tools at your disposal whenever required. Offer clear, empathetic guidance based on your knowledge, considering the user's background and goals. If the question is outside the domain of career development, politely redirect the user to a more appropriate topic.",
+    )
+
+    # Termination condition that stops the task if the agent responds with a text message.
+    termination_condition = TextMessageTermination("career_mentor_agent")
+
+    # Create a team with the career mentor agent and the termination condition.
+    team = RoundRobinGroupChat(
+        [career_mentor_agent],
+        termination_condition=termination_condition,
     )
 
     # Run the agent and stream the messages to the console.
 
     task = input("Enter your task: ")  # Get the user input for the task.
 
-    # For single-turn conversation, you can use the following code:
-    await Console(career_mentor_agent.run_stream(task=task))
+    # # For single-turn conversation, you can use the following code:
+    # await Console(team.run_stream(task=task))
 
-    # # For multi-turn conversation, you can use the following code:
-    # while True:
-    #     stream = career_mentor_agent.run_stream(task=task)
-    #     await Console(stream)
+    # For multi-turn conversation, you can use the following code:
+    while True:
+        stream = team.run_stream(task=task)
+        await Console(stream)
 
-    #     # Get the user response.
-    #     task = input("\nContinue the conversation (type 'exit' to leave): ")
-    #     if task.lower().strip() == "exit":
-    #         break
-
+        # Get the user response.
+        task = input("\nContinue the conversation (type 'exit' to leave): ")
+        if task.lower().strip() == "exit":
+            break
+    
     await model_client.close()
-
 
 if __name__ == "__main__":
     # Solution for Windows users
@@ -116,9 +124,8 @@ if __name__ == "__main__":
 
     asyncio.run(main())
 
-
 # ------------------------------------------------
 # Example tasks to test the agent's response.
 # ------------------------------------------------
 # 1. What are the latest trends in the tech industry in 2025?
-# 2. Write a report on fresher salaries at Amazon, Google & Microsoft India for SDEs & save it to a file.     # Does NOT write to file.
+# 2. What are some good platforms where I can get mentorship? Compare & contrast these platforms. Create a report & save it.
