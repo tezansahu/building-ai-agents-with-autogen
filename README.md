@@ -1,6 +1,6 @@
-# Building AI Agents with AutoGen
+# Agents Assemble! Building Powerful AI Workforces with AutoGen 0.4
 
-This repository demonstrates the implementation of AI agents using the AutoGen framework, to accompany the workshop "Building AI Agents with AutoGen".
+This repository demonstrates the implementation of AI agents using the AutoGen 0.4 framework, for the session "Agents Assemble! Building Powerful AI Workforces with AutoGen 0.4", as a part of the 24xAI Conference (2025).
 
 It showcases various single-agent and multi-agent systems, as well as a user interface for interacting with these agents. Each system is designed to solve specific tasks, ranging from career mentoring to collaborative system design and marketing campaign creation.
 
