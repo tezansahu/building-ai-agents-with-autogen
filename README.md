@@ -17,12 +17,6 @@ The project is organized into the following directories:
 3. **[2-Multi-Agent-System](2-Multi-Agent-System/)**  
    Implements collaborative multi-agent systems for complex tasks like system design, marketing campaigns, and code review.
 
-4. **[3-UI-For-AI-Agents](3-UI-For-AI-Agents/)**  
-   Provides a user interface for interacting with AI agents using Chainlit.
-
-5. **[ai-agents](ai-agents/)**  
-   Contains shared utilities and modules for the agents.
-
 ---
 
 ## Agents Overview
@@ -30,19 +24,13 @@ The project is organized into the following directories:
 ### Single-Agent Systems
 Single-agent systems demonstrate the capabilities of individual agents in solving specific tasks.
 
-1. **[1.1-basic-single-agent.py](1-Single-Agent-System/1.1-basic-single-agent.py)**  
-   A basic implementation of a single-agent system with a predefined persona.
+1. **[1.1-single-agent-with-tools-team.py](1-Single-Agent-System/1.1-single-agent-with-tools-team.py)**  
+   Implements a single agent with a persona, equipped with some tools, that can execute with self-looping.
 
-2. **[1.2-single-agent-with-tools.py](1-Single-Agent-System/1.2-single-agent-with-tools.py)**  
-   Enhances the agent with tools like web search and report writing for improved functionality.
-
-3. **[1.3-single-agent-team.py](1-Single-Agent-System/1.3-single-agent-team.py)**  
-   Implements a single agent capable of executing tasks in a self-looping manner.
-
-4. **[1.4-single-agent-team-with-memory.py](1-Single-Agent-System/1.4-single-agent-team-with-memory.py)**  
+4. **[1.2-single-agent-team-with-memory.py](1-Single-Agent-System/1.2-single-agent-team-with-memory.py)**  
    Adds memory capabilities to the agent for better context retention across interactions.
 
-5. **[1.5-single-agent-team-with-RAG.py](1-Single-Agent-System/1.5-single-agent-team-with-RAG.py)**  
+5. [Optional] **[1.3-single-agent-team-with-RAG.py](1-Single-Agent-System/1.3-single-agent-team-with-RAG.py)**  
    Integrates retrieval-augmented generation (RAG) for enhanced information retrieval and generation.
 
 ---
@@ -68,28 +56,5 @@ Multi-agent systems showcase collaboration between multiple agents to solve comp
    - Security Specialist
    - DevOps Engineer
    - Report Writer
-
-4. **[2.4-swarm-marketing-campaign-creator.py](2-Multi-Agent-System/2.4-swarm-marketing-campaign-creator.py)**  
-   A swarm-based system where agents collaborate to create a comprehensive marketing campaign. Agents include:
-   - Lead Marketing Analyst
-   - Chief Marketing Strategist
-   - Creative Content Creator
-
----
-
-### UI for AI Agents
-The **[3-UI-For-AI-Agents](3-UI-For-AI-Agents/)** directory provides a Chainlit-based user interface for interacting with the agents.
-
-1. **[tools.py](3-UI-For-AI-Agents/tools.py)**  
-   Defines tools like web search and web scraping for use by the agents.
-
-2. **[agents.py](3-UI-For-AI-Agents/agents.py)**  
-   Defines agents for group chat interactions:
-   - Lead Marketing Analyst
-   - Chief Marketing Strategist
-   - Creative Content Creator
-
-3. **[app.py](3-UI-For-AI-Agents/app.py)**  
-   Implements the Chainlit-based UI for interacting with the agents in real-time.
 
 ---

@@ -4,13 +4,13 @@ This folder contains various implementations of single-agent systems, showcasing
 
 ## Contents
 
-1. **[1.1-single-agent-with-tools-team.py](1.3-single-agent-team.py)**  
+1. **[1.1-single-agent-with-tools-team.py](1.1-single-agent-with-tools-team.py)**  
    Implements a single agent with a persona, equipped with some tools, that can execute with self-looping.
 
-2. **[1.2-single-agent-team-with-memory.py](1.4-single-agent-team-with-memory.py)**  
+2. **[1.2-single-agent-team-with-memory.py](1.2-single-agent-team-with-memory.py)**  
    Adds memory capabilities to the single-agent team for better context retention.
 
-3. [Optional] **[1.3-single-agent-team-with-RAG.py](1.5-single-agent-team-with-RAG.py)**  
+3. [Optional] **[1.3-single-agent-team-with-RAG.py](1.3-single-agent-team-with-RAG.py)**  
    Integrates retrieval-augmented generation (RAG) into the single-agent team for improved information retrieval and generation.
 
 ## Prerequisites
