@@ -50,7 +50,7 @@ def write_report(content: str, filename: str) -> str:
 
     Args:
         content (str): The content to write to the file.
-        filename (str): The name of the file.
+        filename (str): The name of the file (markdown format)
     
     Returns:
         str: Status of the file writing operation.

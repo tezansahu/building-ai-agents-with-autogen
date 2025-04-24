@@ -52,7 +52,7 @@ def write_report(content: str, filename: str) -> str:
 
     Args:
         content (str): The content to write to the file.
-        filename (str): The name of the file.
+        filename (str): The name of the file (markdown format)
     
     Returns:
         str: Status of the file writing operation.
@@ -82,21 +82,21 @@ async def populate_memory():
         )
     )
 
-    # memory = [
-    #     "I have a strong background in consulting and want to transition into product management.",
-    #     "I prefer working in fast-paced startup environments.",
-    #     "I value work-life balance and prefer remote work.",
-    #     "I'm interested in leadership roles and cross-functional collaboration.",
-    #     "I want to explore AI-related products and solutions."
-    # ]
-
     memory = [
-        "I have a background in machine learning and prefer working in large, established companies.",
-        "I value job stability over rapid growth.",
-        "I'm interested in working with large-scale data infrastructure.",
-        "I prefer working on deep technical problems rather than people management.",
-        "I want to focus on technical excellence instead of conventional leadership roles.",
+        "I have a strong background in consulting and want to transition into product management.",
+        "I prefer working in fast-paced startup environments.",
+        "I value work-life balance and prefer remote work.",
+        "I'm interested in leadership roles and cross-functional collaboration.",
+        "I want to explore AI-related products and solutions."
     ]
+
+    # memory = [
+    #     "I have a background in machine learning and prefer working in large, established companies.",
+    #     "I value job stability over rapid growth.",
+    #     "I'm interested in working with large-scale data infrastructure.",
+    #     "I prefer working on deep technical problems rather than people management.",
+    #     "I want to focus on technical excellence instead of conventional leadership roles.",
+    # ]
 
     for m in memory:
         await chroma_user_memory.add(
